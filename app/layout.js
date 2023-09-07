@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar";
-import { Roboto, Oswald } from "next/font/google";
 import "./globals.css";
+import { Roboto, Oswald } from "next/font/google";
+import Navbar from "./components/Navbar";
 
 export const metadata = {
   title: "Restaurante",
@@ -17,7 +17,10 @@ const oswald = Oswald({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={oswald.className}>
+      <head>
+        <link rel="icon" href="/assets/3.png" />
+      </head>
+      <body className={`${oswald.className}`}>
         <Navbar />
         {children}
       </body>

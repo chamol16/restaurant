@@ -1,5 +1,7 @@
+import { Fragment } from "react";
 import PostCard from "../../components/PostCard";
 import "./posts.css";
+import Title from "@/app/components/Title";
 
 export const metadata = {
   title: "Posts",
@@ -15,11 +17,14 @@ async function LoadPosts() {
 async function PostPages() {
   const posts = await LoadPosts();
   return (
-    <div className="grid">
-      {posts.map((post) => (
-        <PostCard post={post} key={post.id} />
-      ))}
-    </div>
+    <Fragment>
+      <Title title="Publicaciones" />
+      <div className="grid px-5">
+        {posts.map((post) => (
+          <PostCard post={post} key={post.id} />
+        ))}
+      </div>
+    </Fragment>
   );
 }
 
