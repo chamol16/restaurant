@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Fragment } from "react";
-import Title from "@/app/components/Title";
-import UserCard from "@/app/components/UserCard";
+import Title from "@/components/Title";
+import UserCard from "@/components/UserCard";
 
 async function getUser({ id }) {
   const res = await fetch(`https://reqres.in/api/users/${id}`);

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Title from "@/app/components/Title";
+import Title from "@/components/Title";
 
 export const metadata = {
   title: "Salón",

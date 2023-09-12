@@ -1,6 +1,6 @@
 "use client";
 import { Fragment } from "react";
-import Title from "./components/Title";
+import Title from "@/components/Title";
 
 export default function HomePage() {
   return (

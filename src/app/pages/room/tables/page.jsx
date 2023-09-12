@@ -1,8 +1,7 @@
-import React from "react";
-import Title from "@/app/components/Title";
+import Title from "@/components/Title";
 import Link from "next/link";
 
-const Table = (props) => {
+const Table = () => {
   return (
     <div>
       <Title title="Mesa" />

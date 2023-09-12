@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import PostCard from "../../components/PostCard";
+import PostCard from "@/components/PostCard";
 import "./posts.css";
-import Title from "@/app/components/Title";
+import Title from "@/components/Title";
 
 export const metadata = {
   title: "Posts",

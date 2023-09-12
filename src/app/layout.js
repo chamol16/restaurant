@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Roboto, Oswald } from "next/font/google";
-import Navbar from "./components/Navbar";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Restaurante",

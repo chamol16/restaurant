@@ -1,4 +1,4 @@
-import Title from "@/app/components/Title";
+import Title from "@/components/Title";
 
 export const metadata = {
   title: "Nosotros",

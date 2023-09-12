@@ -1,5 +1,5 @@
-"use client";
 import Link from "next/link";
+import { SucessToaster, ErrorToaster } from "./Toast";
 
 const PostCard = ({ post }) => {
   return (
@@ -12,13 +12,7 @@ const PostCard = ({ post }) => {
         </h3>
       </Link>
       <p>{post.body}</p>
-      <button
-        onClick={() => {
-          alert("click on post");
-        }}
-      >
-        Click
-      </button>
+      <ErrorToaster />
     </div>
   );
 };

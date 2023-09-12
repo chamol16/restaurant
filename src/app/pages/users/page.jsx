@@ -1,6 +1,6 @@
 import { Fragment } from "react";
-import Title from "@/app/components/Title";
-import UserCard from "@/app/components/UserCard";
+import Title from "@/components/Title";
+import UserCard from "@/components/UserCard";
 import Link from "next/link";
 
 async function loadUsers() {
