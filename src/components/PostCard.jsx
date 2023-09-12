@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-import { SucessToaster, ErrorToaster } from "./Toast";
+import { Toaster, toast } from "sonner";
 
 const PostCard = ({ post }) => {
   return (
@@ -12,7 +13,18 @@ const PostCard = ({ post }) => {
         </h3>
       </Link>
       <p>{post.body}</p>
-      <ErrorToaster />
+      <Toaster richColors />
+      <button
+        onClick={() => {
+          toast.error("No hay enlaces en este post", {
+            style: {
+              boxShadow: "none",
+            },
+          });
+        }}
+      >
+        Ver Post
+      </button>
     </div>
   );
 };
