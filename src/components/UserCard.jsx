@@ -1,6 +1,6 @@
 const UserCard = ({ user }) => {
   return (
-    <li className="flex justify-around p-5 bg-red-900 bg-opacity-80 rounded-xl">
+    <li className="flex justify-around p-5 bg-blue-900 bg-opacity-80 rounded-xl w-350">
       <div className="text-white">
         <p>
           {"Id: "}

@@ -15,17 +15,19 @@ async function LoadPosts() {
   return data;
 }
 
-async function PostPages() {
+async function PostPages(props) {
   const posts = await LoadPosts();
   return (
     <Fragment>
-      <Title title="Publicaciones" />
-      <div className="grid px-5">
-        {posts.map((post) => (
-          <PostCard post={post} key={post.id} />
-        ))}
+      <div className="relative p-32 top-0 flex flex-col items-center justify-center">
+        <Title title="Publicaciones" />
+        <div className="grid px-5">
+          {posts.map((post) => (
+            <PostCard post={post} key={post.id} />
+          ))}
+        </div>
+        <Back href="/" />
       </div>
-      <Back href="/" />
     </Fragment>
   );
 }

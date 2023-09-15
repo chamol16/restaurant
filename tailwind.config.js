@@ -13,7 +13,10 @@ module.exports = {
       colors: {
         "custom-wine": "#661819",
       },
+      width: {
+        350: "350px",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-transforms")],
 };

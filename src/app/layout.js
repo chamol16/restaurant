@@ -18,11 +18,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/assets/3.png" />
+        <link rel="icon" href="/assets/5.png" />
       </head>
       <body className={`${oswald.className}`}>
-        <Navbar />
         {children}
+        <Navbar />
       </body>
     </html>
   );

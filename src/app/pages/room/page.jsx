@@ -20,13 +20,15 @@ async function Room() {
 
   return (
     <Fragment>
-      <Title title="Mesas" />
-      <div className="grid grid-cols-3 justify-items-center">
-        {tables1.map((table) => (
-          <Table table={table} key={table.id} />
-        ))}
+      <div className="relative p-32 top-0 flex flex-col items-center justify-center">
+        <Title title="Mesas" />
+        <div className="grid grid-cols-3 justify-items-center">
+          {tables1.map((table) => (
+            <Table table={table} key={table.id} />
+          ))}
+        </div>
+        <Back href="/" />
       </div>
-      <Back href="/" />
     </Fragment>
   );
 }

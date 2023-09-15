@@ -14,15 +14,17 @@ async function Users() {
   const users = await loadUsers();
   return (
     <Fragment>
-      <Title title="Usuarios" />
-      <ul className="grid grid-cols-3 px-5">
-        {users.map((user) => (
-          <Link href={`/pages/users/${user.id}`}>
-            <UserCard user={user} key={user.id} />
-          </Link>
-        ))}
-      </ul>
-      <Back href="/" />
+      <div className="relative p-32 top-0 flex flex-col items-center justify-center">
+        <Title title="Usuarios" />
+        <ul className="grid grid-cols-3 px-5 gap-10">
+          {users.map((user) => (
+            <Link href={`/pages/users/${user.id}`}>
+              <UserCard user={user} key={user.id} />
+            </Link>
+          ))}
+        </ul>
+        <Back href="/" />
+      </div>
     </Fragment>
   );
 }

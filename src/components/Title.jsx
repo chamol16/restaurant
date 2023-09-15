@@ -1,8 +1,8 @@
 const Title = (props) => {
   return (
-    <h1 className="text-2xl font-bold px-10 py-5 text-custom-wine uppercase">
-      {props.title}
-    </h1>
+    <div className="p-6 self-start">
+      <h1 className="text-2xl font-bold uppercase">{props.title}</h1>
+    </div>
   );
 };
 

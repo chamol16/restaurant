@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import Navbar from "@/components/Navbar";
 import Title from "@/components/Title";
 import UserCard from "@/components/UserCard";
 import Back from "@/components/Back";
@@ -14,11 +15,13 @@ async function UserPage({ params }) {
   const user = await getUser(id);
   return (
     <Fragment>
-      <Title title="Perfil de Usuario" />
-      <ul className="flex justify-center">
-        <UserCard user={user} key={user.id} />
-      </ul>
-      <Back href="/pages/users" />
+      <div className="relative p-32 top-0 flex flex-col items-center justify-center">
+        <Title title="Perfil de Usuario" />
+        <ul className="flex justify-center">
+          <UserCard user={user} key={user.id} />
+        </ul>
+        <Back href="/pages/users" />
+      </div>
     </Fragment>
   );
 }

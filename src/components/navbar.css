@@ -12,3 +12,11 @@
 .navbar ul li {
   list-style: none;
 }
+
+.nav-links {
+  position: relative;
+}
+
+.nav-links:hover {
+  border-bottom: 1px solid white;
+}

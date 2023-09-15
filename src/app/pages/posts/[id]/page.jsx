@@ -12,15 +12,13 @@ async function Page({ params }) {
 
   return (
     <Fragment>
-      <div className="px-5 py-5">
-        <h3 className="text-xl font-bold">
+      <div className="relative p-32 top-0 flex flex-col items-center justify-center">
+        <h3 className="text-xl font-bold text-left w-full">
           {post.id}
           {": "}
           {post.title}
         </h3>
-        <p>{post.body}</p>
-      </div>
-      <div>
+        <p className="p-5">{post.body}</p>
         <Suspense fallback={<div>Cargando otras publicaciones...</div>}>
           <PostCard />
         </Suspense>
