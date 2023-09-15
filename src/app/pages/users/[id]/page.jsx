@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { Fragment } from "react";
 import Title from "@/components/Title";
 import UserCard from "@/components/UserCard";
+import Back from "@/components/Back";
 
 async function getUser({ id }) {
   const res = await fetch(`https://reqres.in/api/users/${id}`);
@@ -18,7 +18,7 @@ async function UserPage({ params }) {
       <ul className="flex justify-center">
         <UserCard user={user} key={user.id} />
       </ul>
-      <Link href={"/pages/users"}>Regresar</Link>
+      <Back href="/pages/users" />
     </Fragment>
   );
 }

@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import Title from "@/components/Title";
 import UserCard from "@/components/UserCard";
 import Link from "next/link";
+import Back from "@/components/Back";
 
 async function loadUsers() {
   const res = await fetch("https://reqres.in/api/users");
@@ -21,6 +22,7 @@ async function Users() {
           </Link>
         ))}
       </ul>
+      <Back href="/" />
     </Fragment>
   );
 }

@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import PostCard from "@/components/PostCard";
 import "./posts.css";
 import Title from "@/components/Title";
+import Back from "@/components/Back";
 
 export const metadata = {
   title: "Posts",
@@ -24,6 +25,7 @@ async function PostPages() {
           <PostCard post={post} key={post.id} />
         ))}
       </div>
+      <Back href="/" />
     </Fragment>
   );
 }

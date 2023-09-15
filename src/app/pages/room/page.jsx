@@ -2,6 +2,7 @@ import Title from "@/components/Title";
 import Table from "@/components/Table";
 import { Fragment } from "react";
 import tablesData from "../../../data/Tables.json";
+import Back from "@/components/Back";
 
 export const metadata = {
   title: "Salón",
@@ -25,6 +26,7 @@ async function Room() {
           <Table table={table} key={table.id} />
         ))}
       </div>
+      <Back href="/" />
     </Fragment>
   );
 }
