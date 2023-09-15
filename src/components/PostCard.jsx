@@ -1,10 +1,9 @@
 "use client";
 import Link from "next/link";
-import { Toaster, toast } from "sonner";
 
 const PostCard = ({ post }) => {
   return (
-    <div className="bg-gray-200 p-10">
+    <div className="bg-gray-200 p-10 w-64 h-full flex flex-col justify-between items-center">
       <Link href={`/pages/posts/${post.id}`}>
         <h3 className="text-xl font-bold mb-5">
           {post.id}
@@ -13,18 +12,12 @@ const PostCard = ({ post }) => {
         </h3>
       </Link>
       <p>{post.body}</p>
-      <Toaster richColors />
-      <button
-        onClick={() => {
-          toast.error("No hay enlaces en este post", {
-            style: {
-              boxShadow: "none",
-            },
-          });
-        }}
+      <Link
+        href={`/pages/posts/${post.id}`}
+        className="font-bold border-b border-black"
       >
         Ver Post
-      </button>
+      </Link>
     </div>
   );
 };

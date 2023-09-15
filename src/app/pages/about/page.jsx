@@ -15,7 +15,7 @@ const About = () => {
         alt="Vista al puerto de Puntarenas desde el restaurante."
       />
       <div className="relative p-32 top-0 flex flex-col items-center justify-center">
-        <div className="py-5 bg-white border-4 mx-auto w-3/4">
+        <div className="py-5 bg-white border border-gray-200 mx-auto w-3/4">
           <Title title="Nosotros" />
           <div className="px-10">
             <p className="m-2">

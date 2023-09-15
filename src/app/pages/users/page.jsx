@@ -14,9 +14,9 @@ async function Users() {
   const users = await loadUsers();
   return (
     <Fragment>
-      <div className="relative p-32 top-0 flex flex-col items-center justify-center">
+      <div className="flex flex-col relative p-32 items-center justify-center border-4">
         <Title title="Usuarios" />
-        <ul className="grid grid-cols-3 px-5 gap-10">
+        <ul className="grid grid-cols-2 px-5 gap-10">
           {users.map((user) => (
             <Link href={`/pages/users/${user.id}`}>
               <UserCard user={user} key={user.id} />

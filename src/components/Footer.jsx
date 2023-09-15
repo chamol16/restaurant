@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Footer = (props) => {
   return (
-    <footer className=" text-white mt-20 w-full bottom-0 fixed bg-gray-800 bg-opacity-60">
+    <footer className=" text-white mt-20 w-full absolute bottom-0 bg-gray-800 bg-opacity-60">
       <div className="container mx-auto text-center p-5">
         <p>
           &copy; 2023 <b className="uppercase"> Sport & Vista Restaurant </b>

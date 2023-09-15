@@ -18,7 +18,7 @@ async function Page({ params }) {
           {": "}
           {post.title}
         </h3>
-        <p className="p-5">{post.body}</p>
+        <p className="pt-3">{post.body}</p>
         <Suspense fallback={<div>Cargando otras publicaciones...</div>}>
           <PostCard />
         </Suspense>
