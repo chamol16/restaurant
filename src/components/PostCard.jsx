@@ -16,7 +16,7 @@ const PostCard = ({ post }) => {
         href={`/pages/posts/${post.id}`}
         className="font-bold border-b border-black"
       >
-        Ver Post
+        Ver Reseña
       </Link>
     </div>
   );

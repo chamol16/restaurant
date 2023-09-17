@@ -1,4 +1,3 @@
-import Title from "@/components/Title";
 import Banner from "@/components/Banner";
 import { Fragment } from "react";
 import Footer from "@/components/Footer";
@@ -11,12 +10,16 @@ const About = () => {
   return (
     <Fragment>
       <Banner
-        src="/assets/berlin.jpg"
+        src="/assets/restaurant_3.jpg"
         alt="Vista al puerto de Puntarenas desde el restaurante."
       />
       <div className="relative p-32 top-0 flex flex-col items-center justify-center">
         <div className="py-5 bg-white border border-gray-200 mx-auto w-3/4">
-          <Title title="Nosotros" />
+          <div className="p-6 self-start">
+            <h1 className="text-2xl font-bold uppercase text-black">
+              Nosotros
+            </h1>
+          </div>
           <div className="px-10">
             <p className="m-2">
               En <b>[Nombre del Restaurante]</b>, no somos solo un restaurante;
@@ -54,12 +57,14 @@ const About = () => {
               Bienvenido a <b>[Nombre del Restaurante]</b>, donde cada comida es
               una celebración y cada cliente es parte de nuestra historia.
             </p>
+            {/* 
             <div className="flex flex-col items-center justify-center border-4 p-5 m-5 border-red-100">
               <img src="/assets/abuelos.png" />
               <p className="p-2">
                 José Ángel Jiménez Mora - Elida Chavarría Vargas
               </p>
             </div>
+              */}
           </div>
         </div>
       </div>

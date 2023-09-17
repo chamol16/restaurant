@@ -5,7 +5,7 @@ const Back = (props) => {
   const router = useRouter();
   const route = props.href;
   return (
-    <div className="flex w-full justify-end p-10">
+    <div className="flex w-full justify-end mt-5 text-white">
       <button
         onClick={() => {
           //Aquí puede ir mas lógica

@@ -2,6 +2,7 @@ import Title from "@/components/Title";
 import tablesData from "../../../../data/Tables.json";
 import Back from "@/components/Back";
 import { Fragment } from "react";
+import Banner from "@/components/Banner";
 
 async function loadOrder(id) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
@@ -25,43 +26,46 @@ async function Table({ params }) {
 
   return (
     <Fragment>
-      <div className="relative p-32 top-0 flex flex-col items-center justify-center">
-        <Title title="Orden" />
-        <div className="flex flex-col items-center border-4 rounded-lg border-black py-5 mx-auto w-2/4">
-          <p className="text-xl">Mesa # {id}</p>
-          <div className="flex flex-col justify-between p-5 w-96 ">
-            {mesa.orders.map((o) => (
-              <div
-                key={o.product}
-                className="flex flex-row justify-between items-center"
-              >
-                <div>
-                  {o.product} {": "}
-                  {o.quantity}
+      <div className="h-full w-full bg-black">
+        <Banner src="/assets/bill_2.jpg" />
+        <div className="relative p-32 top-0 flex flex-col items-center justify-center">
+          <Title title="Orden" />
+          <div className="flex flex-col items-center border-4 rounded-lg border-white py-5 mx-auto lg:w-96 sm:w-96">
+            <p className="text-xl text-white">Mesa # {id}</p>
+            <div className="flex flex-col justify-between p-5 sm:w-96 lg:w-96 text-white">
+              {mesa.orders.map((o) => (
+                <div
+                  key={o.product}
+                  className="flex flex-row justify-between items-center"
+                >
+                  <div>
+                    {o.product} {": "}
+                    {o.quantity}
+                  </div>
+                  <div>
+                    {"₡"}
+                    {o.price}
+                  </div>
                 </div>
-                <div>
-                  {"₡"}
-                  {o.price}
-                </div>
+              ))}
+              <hr className="bg-white h-1 my-1" />
+              <div className="flex justify-between">
+                <span>Precio sin IVA:</span>
+                <span>₡{totalPrice}</span>
               </div>
-            ))}
-            <hr className="bg-black h-1 my-1" />
-            <div className="flex justify-between">
-              <span>Precio sin IVA:</span>
-              <span>₡{totalPrice}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>IVA:</span>
-              <span>₡{iva}</span>
-            </div>
-            <hr className="bg-black h-1 my-1" />
-            <div className="flex justify-between">
-              <span>Precio Total:</span>
-              <b>₡{totalPrice + iva}</b>
+              <div className="flex justify-between">
+                <span>IVA:</span>
+                <span>₡{iva}</span>
+              </div>
+              <hr className="bg-white h-1 my-1" />
+              <div className="flex justify-between">
+                <span>Precio Total:</span>
+                <b>₡{totalPrice + iva}</b>
+              </div>
             </div>
           </div>
+          <Back href="/pages/room" />
         </div>
-        <Back href="/pages/room" />
       </div>
     </Fragment>
   );

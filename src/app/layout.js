@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/assets/5.png" />
+        <link rel="icon" href="/assets/logo_3.png" />
       </head>
       <body className={`${oswald.className}`}>
         {children}

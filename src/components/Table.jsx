@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const Table = ({ table }) => {
   return (
-    <div className="h-48 w-64 flex flex-col items-center justify-between">
+    <div className="w-full flex flex-col items-center justify-between text-white bg-black p-10 bg-opacity-70">
       <Link href={`/pages/room/${table.id}`}>
-        <MdTableRestaurant className="text-black h-full w-full" />
+        <MdTableRestaurant className="text-white h-full w-full" />
         <h3>Mesa # {table.id}</h3>
       </Link>
     </div>
