@@ -9,15 +9,14 @@ export const metadata = {
   title: "Posts",
 };
 
-async function LoadPosts() {
-  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+async function loadPosts() {
+  const res = await fetch("http://localhost:3000/api/posts");
   const data = await res.json();
-  await new Promise((resolve) => setTimeout(resolve, 2000));
   return data;
 }
 
-async function PostPages(props) {
-  const posts = await LoadPosts();
+async function Posts(props) {
+  const posts = await loadPosts();
   return (
     <Fragment>
       <Banner src="/assets/restaurant_1.jpg" />
@@ -36,4 +35,4 @@ async function PostPages(props) {
   );
 }
 
-export default PostPages;
+export default Posts;

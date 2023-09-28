@@ -6,9 +6,9 @@ import Back from "@/components/Back";
 import Banner from "@/components/Banner";
 
 async function loadUsers() {
-  const res = await fetch("https://reqres.in/api/users");
+  const res = await fetch("http://localhost:3000/api/users/");
   const data = await res.json();
-  return data.data;
+  return data;
 }
 
 async function Users() {

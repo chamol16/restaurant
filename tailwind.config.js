@@ -14,7 +14,7 @@ module.exports = {
         "custom-wine": "#661819",
       },
       width: {
-        350: "350px",
+        400: "400px",
       },
     },
   },

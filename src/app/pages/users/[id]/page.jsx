@@ -5,23 +5,22 @@ import Back from "@/components/Back";
 import Banner from "@/components/Banner";
 
 async function getUser({ id }) {
-  const res = await fetch(`https://reqres.in/api/users/${id}`);
+  const res = await fetch(`http://localhost:3000/api/users/${id}`);
   const data = await res.json();
-  return data.data;
+  return data;
 }
 
 async function UserPage({ params }) {
-  const id = params;
-  const user = await getUser(id);
-  const name = await user.first_name;
+  const id = params.id;
+  const user = await getUser({ id });
   return (
     <Fragment>
-           <Banner
+      <Banner
         src="/assets/chef_2.jpg"
         alt="Vista al puerto de Puntarenas desde el restaurante."
       />
       <div className="relative p-32 top-0 flex flex-col items-center justify-center">
-        <Title title={`Perfil de ${name}`} />
+        <Title title={`Perfil de ${user.name}`} />
         <ul className="flex justify-center">
           <UserCard user={user} key={user.id} />
         </ul>

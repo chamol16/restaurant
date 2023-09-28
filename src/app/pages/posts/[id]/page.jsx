@@ -3,26 +3,23 @@ import Banner from "@/components/Banner";
 import Back from "@/components/Back";
 import Button from "@/components/Button";
 
-async function loadPost(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+async function loadPost({ id }) {
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`);
   const data = await res.json();
   return data;
 }
 
 async function Page({ params }) {
-  const post = await loadPost(params.id);
+  const id = params.id;
+  const post = await loadPost({ id });
 
   return (
     <Fragment>
       <Banner src="/assets/restaurant_2.jpg" />
       <div className="relative p-32 top-0 flex flex-col items-center justify-center">
         <div className="bg-gray-200 p-10 flex flex-col justify-start items-center rounded-lg">
-          <h3 className="text-xl font-bold text-left w-full">
-            {post.id}
-            {": "}
-            {post.title}
-          </h3>
-          <p className="pt-3">{post.body}</p>
+          <h3 className="text-xl font-bold text-left w-full">{post.title}</h3>
+          <p className="pt-3">{post.description}</p>
         </div>
         <Button
           text="

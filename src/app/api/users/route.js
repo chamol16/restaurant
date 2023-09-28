@@ -1,31 +1,24 @@
 import { NextResponse } from "next/server";
+import { prisma } from "@/libs/prisma";
 
 export async function GET() {
-  //query DB, extract params, communicate other APIS
-  console.log(process.env.TOKEN);
-  console.log(process.env.SECRET_KEY);
-
-  const res = await fetch("https://reqres.in/api/users");
-  const data = await res.json();
-  return NextResponse.json({ data });
+  //console.log(process.env.TOKEN);
+  const users = await prisma.user.findMany();
+  return NextResponse.json(users);
 }
 
 export async function POST(request) {
-  const { name, lastName } = await request.json();
-  console.log(name, lastName);
-  return NextResponse.json({
-    message: "Creando Usuario",
+  const { id, name, lastName, rol, email, bio, avatar } = await request.json();
+  const newUser = await prisma.user.create({
+    data: {
+      id,
+      name,
+      lastName,
+      rol,
+      email,
+      bio,
+      avatar,
+    },
   });
-}
-
-export function PUT() {
-  return NextResponse.json({
-    message: "Actualizando Usuario",
-  });
-}
-
-export function DELETE() {
-  return NextResponse.json({
-    message: "Eliminando Usuario",
-  });
+  return NextResponse.json(newUser);
 }
