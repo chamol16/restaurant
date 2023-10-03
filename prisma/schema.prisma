@@ -24,7 +24,7 @@ model User {
 }
 
 model Post {
-  id Int @id
+  id Int @id @default(autoincrement())
   title String
   description String
   userId Int 

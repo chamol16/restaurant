@@ -2,8 +2,9 @@ import Title from "@/components/Title";
 import Table from "@/components/Table";
 import { Fragment } from "react";
 import tablesData from "../../../data/Tables.json";
-import Back from "@/components/Back";
+import { WhiteBack, BlackBack } from "@/components/Back";
 import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "Salón",
@@ -32,8 +33,9 @@ async function Room() {
             <Table table={table} key={table.id} />
           ))}
         </div>
-        <Back href="/" />
+        <WhiteBack href="/" />
       </div>
+      <Footer position="relative" />
     </Fragment>
   );
 }

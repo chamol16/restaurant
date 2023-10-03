@@ -1,8 +1,9 @@
 import { Fragment } from "react";
 import Title from "@/components/Title";
 import UserCard from "@/components/UserCard";
-import Back from "@/components/Back";
+import { BlackBack, WhiteBack } from "@/components/Back";
 import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 
 async function getUser({ id }) {
   const res = await fetch(`http://localhost:3000/api/users/${id}`);
@@ -24,8 +25,9 @@ async function UserPage({ params }) {
         <ul className="flex justify-center">
           <UserCard user={user} key={user.id} />
         </ul>
-        <Back href="/pages/users" />
+        <WhiteBack href="/pages/users" />
       </div>
+      <Footer position="relative" />
     </Fragment>
   );
 }

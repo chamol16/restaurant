@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import { Fragment } from "react";
 import Footer from "@/components/Footer";
+import Title from "@/components/Title";
 
 export const metadata = {
   title: "Nosotros",
@@ -13,12 +14,11 @@ const About = () => {
         src="/assets/restaurant_3.jpg"
         alt="Vista al puerto de Puntarenas desde el restaurante."
       />
-      <div className="relative p-32 top-0 flex flex-col items-center justify-center">
-        <div className="py-5 bg-white border border-gray-200 mx-auto w-3/4">
+      <div className="flex flex-col items-center justify-center m-24 top-0 relative">
+        <Title title="Nosotros" />
+        <div className="py-5 bg-gray-200 border border-gray-200 mx-auto w-3/4">
           <div className="p-6 self-start">
-            <h1 className="text-2xl font-bold uppercase text-black">
-              Nosotros
-            </h1>
+            <h1 className="text-2xl font-bold uppercase text-black"></h1>
           </div>
           <div className="px-10">
             <p className="m-2">
@@ -68,7 +68,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer position="relative" />
     </Fragment>
   );
 };

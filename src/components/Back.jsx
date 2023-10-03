@@ -1,21 +1,34 @@
 "use client";
 import { useRouter, useParams } from "next/navigation";
 
-const Back = (props) => {
+export const BlackBack = (props) => {
   const router = useRouter();
   const route = props.href;
   return (
-    <div className="flex w-full justify-end mt-5 text-white">
-      <button
-        onClick={() => {
-          //Aquí puede ir mas lógica
-          router.push(`${route}`);
-        }}
-      >
-        <h2 className="text-xl font-bold uppercase">Regresar</h2>
-      </button>
-    </div>
+    <button
+      className="flex w-full justify-end p-10 text-black"
+      onClick={() => {
+        //Aquí puede ir mas lógica
+        router.push(`${route}`);
+      }}
+    >
+      <h2 className="text-xl font-bold uppercase">Regresar</h2>
+    </button>
   );
 };
 
-export default Back;
+export const WhiteBack = (props) => {
+  const router = useRouter();
+  const route = props.href;
+  return (
+    <button
+      className="flex w-full justify-end p-10 text-white"
+      onClick={() => {
+        //Aquí puede ir mas lógica
+        router.push(`${route}`);
+      }}
+    >
+      <h2 className="text-xl font-bold uppercase">Regresar</h2>
+    </button>
+  );
+};

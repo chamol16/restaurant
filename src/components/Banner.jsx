@@ -1,10 +1,12 @@
 const Banner = (props) => {
   return (
-    <img
-      src={props.src}
-      alt={props.alt}
-      className="w-full h-full max-h-screen absolute bg-cover bg-center box-border bg-black bg-opacity-30"
-    />
+    <div className="w-full h-full absolute top-0">
+      <img
+        src={props.src}
+        alt={props.alt}
+        className="w-full h-full max-h-screen bg-cover bg-center box-border bg-black bg-opacity-30"
+      />
+    </div>
   );
 };
 

@@ -8,6 +8,7 @@ const UserCard = ({ user }) => {
         <p>Puesto: {user.rol}</p>
         <p>Descripción: {user.bio}</p>
         <p>Contacto: {user.email}</p>
+        <p>Inicio de labores: {new Date(user.createdAt).toLocaleDateString()}</p>
       </div>
       <img
         src={user.avatar}

@@ -10,7 +10,6 @@
 }
 
 body {
-  position: relative;
-  background-color: var(--white-color);
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }

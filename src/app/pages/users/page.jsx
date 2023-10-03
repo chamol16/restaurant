@@ -2,8 +2,9 @@ import { Fragment } from "react";
 import Title from "@/components/Title";
 import UserCard from "@/components/UserCard";
 import Link from "next/link";
-import Back from "@/components/Back";
+import { WhiteBack, BlackBack } from "@/components/Back";
 import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 
 async function loadUsers() {
   const res = await fetch("http://localhost:3000/api/users/");
@@ -21,15 +22,16 @@ async function Users() {
       />
       <div className="flex flex-col relative p-32 items-center justify-center">
         <Title title="Personal" />
-        <ul className="grid grid-cols-2 gap-4">
+        <ul className="grid grid-cols-2 gap-10">
           {users.map((user) => (
             <Link href={`/pages/users/${user.id}`}>
               <UserCard user={user} key={user.id} />
             </Link>
           ))}
         </ul>
-        <Back href="/" />
+        <BlackBack href="/" />
       </div>
+      <Footer position="relative" />
     </Fragment>
   );
 }

@@ -1,6 +1,6 @@
 import Title from "@/components/Title";
 import tablesData from "../../../../data/Tables.json";
-import Back from "@/components/Back";
+import {WhiteBack, BlackBack} from "@/components/Back";
 import { Fragment } from "react";
 import Banner from "@/components/Banner";
 
@@ -64,7 +64,7 @@ async function Table({ params }) {
               </div>
             </div>
           </div>
-          <Back href="/pages/room" />
+          <WhiteBack href="/pages/room" />
         </div>
       </div>
     </Fragment>
