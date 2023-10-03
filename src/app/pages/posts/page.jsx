@@ -1,10 +1,10 @@
 import { Fragment } from "react";
 import PostCard from "@/components/PostCard";
 import Title from "@/components/Title";
-import { BlackBack, WhiteBack } from "@/components/Back";
 import Banner from "@/components/Banner";
 import Footer from "@/components/Footer";
 import { prisma } from "@/libs/prisma";
+import Link from "next/link";
 
 export const metadata = {
   title: "Posts",
@@ -36,7 +36,17 @@ async function Posts(props) {
             <PostCard post={post} key={post.id} />
           ))}
         </div>
-        <BlackBack href="/" />
+        <div className="flex justify-between w-3/4 pt-10">
+          <Link
+            className="text-xl font-bold uppercase"
+            href={"/pages/posts/new"}
+          >
+            Crear nueva reseña
+          </Link>
+          <Link className="text-xl font-bold uppercase" href={"/"}>
+            Regresar
+          </Link>
+        </div>
       </div>
       <Footer position="relative" />
     </Fragment>
